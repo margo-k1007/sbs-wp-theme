@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import "utils/variables",
+"utils/mixins",
+"utils/functions",
+"utils/helpers";
+
+// 2. Vendors
+@import "vendors/animate",
+"vendors/slick";
+
+// 3. Base stuff
+@import "base/normalize",
+"base/fonts",
+"base/base",
+"base/typography";
+
+
+// 4. Components
+@import "components/buttons",
+"components/main-section",
+"components/heading-section",
+"components/approaches",
+"components/cta",
+"components/expertises",
+"components/faq",
+"components/gallery",
+"components/image-context",
+"components/infographics",
+"components/latest-works",
+"components/legal",
+"components/newsletter",
+"components/numbered-list",
+"components/mission",
+"components/partners",
+"components/projects",
+"components/services",
+"components/service-filter",
+"components/testimonials",
+"components/text-context";
+
+// 5. Layout-related sections
+@import "layout/grid",
+"layout/footer",
+"layout/navigation",
+"layout/forms",
+"layout/header";
+
+// 6. Page-specific styles
+@import "pages/contact-page",
+"pages/page",
+"pages/post",
+"pages/404-page";
+
+// 7. Themes
+@import "themes/theme",
+"themes/admin";
+

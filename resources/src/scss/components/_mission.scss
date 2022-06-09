@@ -1,0 +1,88 @@
+.mission {
+
+  &__title {
+    margin-bottom: 70px;
+    background: -webkit-linear-gradient(-50deg, $blue 0%, $blue-500 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include breakpoint(0, $xxl) {
+      margin-bottom: 60px;
+    }
+
+    @include breakpoint(0, $lg) {
+      margin-bottom: 40px;
+    }
+
+    @include breakpoint(0, $md) {
+      margin-bottom: 30px;
+    }
+
+  }
+
+  &__row {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+
+    @include breakpoint(0, $xlg) {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+
+}
+
+.card {
+  padding: 50px;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  border: 1px solid #000000;
+
+  @include breakpoint(0, $xxl) {
+    padding: 40px;
+  }
+
+  @include breakpoint(0, $lg) {
+    padding: 30px;
+  }
+
+  &:hover {
+    background: $secondary-gradient;
+    border: 0;
+
+    .card__title {
+      color: $light;
+    }
+
+    .card__item {
+      color: $light;
+      border-color: $light;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    @include breakpoint(0, $lg) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item {
+    padding: 15px 0;
+    color: $dark;
+    text-transform: uppercase;
+    font-size: 16px;
+    border-bottom: 1px solid $dark;
+
+    @include breakpoint(0, $lg) {
+      padding: 10px 0;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+}

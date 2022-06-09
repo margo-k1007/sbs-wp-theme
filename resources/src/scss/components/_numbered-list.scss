@@ -1,0 +1,92 @@
+.numbered-list {
+  counter-reset: filelds-counter;
+
+  &:not(:first-of-type) {
+    padding-top: 0;
+  }
+
+  &__header {
+    margin-bottom: 40px;
+
+    @include breakpoint(0, $lg) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    background: -webkit-linear-gradient(-50deg, $blue 0%, $blue-500 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__text {
+    color: $dark;
+  }
+
+}
+
+.item {
+  position: relative;
+  border-bottom: 1px solid $grey-border;
+  padding: 50px 0 50px 100px;
+  counter-increment: filelds-counter;
+
+  @include breakpoint(0, $xxl) {
+    padding: 40px 0 40px 80px;
+  }
+
+  @include breakpoint(0, $lg) {
+    padding: 30px 0 30px 60px;
+  }
+
+  @include breakpoint(0, $sm) {
+    padding-left: 40px;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  &:before {
+    content: counter(filelds-counter);
+    position: absolute;
+    top: 45px;
+    left: 0;
+    color: $grey-600;
+    font-weight: 300;
+    font-size: 80px;
+    line-height: 1;
+
+    @include breakpoint(0, $xxl) {
+      top: 35px;
+      font-size: 70px;
+    }
+
+    @include breakpoint(0, $lg) {
+      top: 25px;
+      font-size: 60px;
+    }
+
+    @include breakpoint(0, $sm) {
+      font-size: 40px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 20px;
+
+    @include breakpoint(0, $sm) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    color: $dark;
+    line-height: 1.6;
+  }
+
+}

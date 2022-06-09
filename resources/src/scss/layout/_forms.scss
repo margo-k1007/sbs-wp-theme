@@ -1,0 +1,206 @@
+form {
+
+  p {
+    margin: 0;
+  }
+
+  .error {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 15px;
+    color: $error;
+    margin-top: -10px;
+  }
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="month"],
+input[type="password"],
+input[type="search"],
+input[type="url"],
+input[type="wwek"],
+input[type="datetime"],
+select,
+textarea {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  padding: 10px 0;
+  height: 50px;
+  border: 0;
+  border-bottom: 1px solid $dark;
+  border-radius: $border-radius;
+  font-size: 16px;
+  font-family: $text-font-family;
+  box-shadow: none;
+  outline: none;
+  background-color: $white;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="url"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+textarea {
+  min-height: 250px;
+
+  @include breakpoint(0, $xxl) {
+    min-height: 150px;
+  }
+
+  @include breakpoint(0, $md) {
+    min-height: 100px;
+  }
+}
+
+::-webkit-input-placeholder {
+  color: rgba($text, 0.4);
+}
+::-moz-placeholder {
+  color: rgba($text, 0.4);
+}
+:-ms-input-placeholder {
+  color: rgba($text, 0.4);
+}
+:-moz-placeholder {
+  color: rgba($text, 0.4);
+}
+
+
+.form {
+
+  &--newsletter {
+
+    .form__inline {
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -10px;
+        width: 30px;
+        height: 21px;
+        background-position: 50% 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml,%3Csvg width='30' height='22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 .25V21.75h30V.25H0Zm18.3125 11.032-2.723 2.736c-.331.3075-.849.307-1.166.013l-2.7365-2.749.024-.0235L1.8235 1.25H28.183l-9.8945 10.009.024.023Zm-8.0505-.0155L1 20.1775V1.9615l9.262 9.305Zm.705.7085 2.7615 2.7745c.3545.3305.8095.4965 1.2665.4965.4615 0 .925-.1695 1.2905-.51l2.748-2.761 9.1185 8.775H1.843l9.124-8.775Zm8.7715-.708L29 1.961v18.2165l-9.2615-8.9105Z' fill='%23000'/%3E%3C/svg%3E%0A");
+      }
+
+      .form__field {
+        padding-left: 60px;
+
+        @include breakpoint(0, $xl) {
+          padding-left: 40px;
+        }
+      }
+    }
+
+  }
+
+  &__inline {
+    display: flex;
+
+    .form__field {
+      width: 100%;
+      padding-right: 120px;
+      background-color: $light;
+
+      @include breakpoint(0, $xl) {
+        padding-right: 100px;
+      }
+    }
+
+    .form__button {
+      position: absolute;
+      top: 13px;
+      right: 0;
+      text-transform: uppercase;
+
+      @include breakpoint(0, $xl) {
+        top: 18px;
+      }
+    }
+
+  }
+
+  &__group {
+    margin-bottom: 20px;
+
+    @include breakpoint(0, $xl) {
+      margin-bottom: 15px;
+    }
+
+    &--row {
+      display: flex;
+      justify-content: space-between;
+
+      @include breakpoint(0, $md) {
+        flex-wrap: wrap;
+      }
+
+      .wpcf7-form-control-wrap {
+        width: 49%;
+
+        &:last-of-type {
+          @include breakpoint(0, $md) {
+            margin-bottom: 0;
+          }
+        }
+
+        @include breakpoint(0, $md) {
+          width: 100%;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+
+    @include breakpoint(0, $lg) {
+      margin-top: 25px;
+    }
+  }
+
+}
+
+.mc4wp-alert {
+  font-size: 14px;
+
+  &.mc4wp-success {
+    color: $primary;
+  }
+
+  &.mc4wp-notice,
+  &.mc4wp-error {
+    color: $red;
+  }
+}
+
+.wpcf7-form {
+  .wpcf7-not-valid-tip {
+    font-size: 12px;
+    color: $red;
+  }
+  .wpcf7-response-output {
+    font-size: 16px;
+  }
+}

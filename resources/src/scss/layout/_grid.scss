@@ -1,0 +1,151 @@
+.container {
+  padding: 0 $grid-gutters;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1550px;
+
+  //@include breakpoint(0, $xxl) {
+  //  max-width: 1140px;
+  //}
+
+  @each $prefix, $breakpoint in $grid-breakpoints {
+    @each $c-prefix, $width in $container-max-widths {
+      @if $prefix == $c-prefix {
+        @include breakpoint($breakpoint) {
+          @include container($width)
+        }
+      }
+    }
+  }
+
+  &--fluid {
+    max-width: 100%;
+  }
+
+  &--sm {
+    max-width: 1200px;
+  }
+
+  &--wide {
+    max-width: $container-max-widths-wide;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  &--gutters {
+    margin-left: -$grid-gutters / 2;
+    margin-right: -$grid-gutters / 2;
+
+    > [class*="col"] {
+      padding: 0 $grid-gutters / 2;
+    }
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
+  }
+
+  &--start {
+    justify-content: flex-start;
+    text-align: start;
+  }
+
+  &--center {
+    justify-content: center;
+    text-align: center;
+  }
+
+  &--end {
+    justify-content: flex-end;
+    text-align: end;
+  }
+
+  &--top {
+    align-items: flex-start;
+  }
+
+  &--middle {
+    align-items: center;
+  }
+
+  &--bottom {
+    align-items: flex-end;
+  }
+
+  &--around {
+    justify-content: space-around;
+  }
+
+  &--between {
+    justify-content: space-between;
+  }
+}
+
+.col {
+  flex: 1 0 0;
+  max-width: 100%;
+}
+
+.section {
+  padding: 100px 0;
+
+  @include breakpoint(0, $xxl) {
+    padding: 80px 0;
+  }
+
+  @include breakpoint(0, $xl) {
+    padding: 60px 0;
+  }
+
+  @include breakpoint(0, $lg) {
+    padding: 40px 0;
+  }
+
+  @include breakpoint(0, $md) {
+    padding: 30px 0;
+  }
+}
+
+.section-sm {
+  padding: 80px 0;
+
+  @include breakpoint(0, $xxl) {
+    padding: 60px 0;
+  }
+
+  @include breakpoint(0, $xl) {
+    padding: 40px 0;
+  }
+
+  @include breakpoint(0, $lg) {
+    padding: 30px 0;
+  }
+}
+
+.section-bg {
+  margin: 100px 0;
+  padding: 160px 0;
+
+  @include breakpoint(0, $xxl) {
+    margin: 80px 0;
+    padding: 120px 0;
+  }
+
+  @include breakpoint(0, $xl) {
+    margin: 60px 0;
+    padding: 80px 0;
+  }
+
+  @include breakpoint(0, $lg) {
+    margin: 40px 0;
+    padding: 60px 0;
+  }
+
+  @include breakpoint(0, $md) {
+    margin: 30px 0;
+    padding: 40px 0;
+  }
+}

@@ -1,0 +1,87 @@
+.approaches {
+  background: $blue $secondary-gradient;
+
+  &__row {
+    display: grid;
+    grid-gap: 125px 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @include breakpoint(0, $xxl) {
+      grid-gap: 100px 75px;
+    }
+
+    @include breakpoint(0, $xl) {
+      grid-gap: 50px;
+    }
+
+    @include breakpoint(0, $lg) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint(0, $sm) {
+      grid-template-columns: 1fr;
+      grid-gap: 30px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 120px;
+
+    @include breakpoint(0, $xxl) {
+      margin-bottom: 80px;
+    }
+
+    @include breakpoint(0, $xl) {
+      margin-bottom: 60px;
+    }
+
+    @include breakpoint(0, $lg) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.approach {
+  padding-top: 60px;
+  border-top: 2px solid $dark;
+
+  @include breakpoint(0, $xl) {
+    padding-top: 40px;
+  }
+
+  @include breakpoint(0, $md) {
+    padding-top: 30px;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: $dark;
+
+    @include breakpoint(0, $lg) {
+      font-size: 16px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    @include breakpoint(0, $xxl) {
+      margin-bottom: 40px;
+    }
+
+    @include breakpoint(0, $lg) {
+      margin-bottom: 30px;
+    }
+
+    @include breakpoint(0, $md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    color: $dark;
+  }
+
+}

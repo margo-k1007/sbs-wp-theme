@@ -1,0 +1,54 @@
+body {
+
+  &.page-template-default,
+  &.single {
+
+    #page {
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 260px;
+        z-index: 5;
+        width: 490px;
+        height: 680px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 100% 50%;
+        background-image: url("./../assets/images/page-bubble-decor.png");
+
+        @include breakpoint(0, $xlg) {
+          width: 300px;
+          height: 400px;
+        }
+
+        @include breakpoint(0, $lg) {
+          width: 200px;
+          right: -50px;
+          top: 150px;
+        }
+
+        @include breakpoint(0, $sm) {
+          top: 250px;
+        }
+      }
+
+      .container {
+        position: relative;
+        z-index: 10;
+      }
+    }
+
+  }
+
+}
+
+.editor {
+
+  a {
+    text-decoration: underline;
+  }
+
+}

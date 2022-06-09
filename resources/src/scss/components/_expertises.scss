@@ -1,0 +1,68 @@
+.expertises {
+  background: $blue $secondary-gradient;
+
+  &__row {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    @include breakpoint(0, $lg) {
+      grid-gap: 40px;
+    }
+
+    @include breakpoint(0, $md) {
+      grid-gap: 30px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 80px;
+
+    @include breakpoint(0, $xxl) {
+      margin-bottom: 70px;
+    }
+
+    @include breakpoint(0, $xl) {
+      margin-bottom: 50px;
+    }
+
+    @include breakpoint(0, $lg) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.expertise {
+
+
+  &__image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 100%;
+    margin-bottom: 10px;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0 !important;
+    font-size: 20px;
+    font-weight: 900;
+    color: $dark;
+
+    @include breakpoint(0, $lg) {
+      font-size: 18px;
+    }
+  }
+
+}

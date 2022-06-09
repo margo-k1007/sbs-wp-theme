@@ -1,0 +1,74 @@
+.infographics {
+
+  &:first-of-type {
+    padding: 55px 0;
+
+    @include breakpoint(0, $xl) {
+      padding: 40px 0;
+    }
+
+    @include breakpoint(0, $lg) {
+      padding: 30px 0;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    @include breakpoint(0, $xl) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @include breakpoint(0, $lg) {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+    }
+
+    @include breakpoint(0, $sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+}
+
+.infographic {
+  display: flex;
+  align-items: center;
+
+  @include breakpoint(0, $xlg) {
+    flex-direction: column;
+  }
+
+  &__num {
+    margin-right: 15px;
+    color: $dark;
+    font-weight: 900;
+    line-height: 1;
+    font-size: 60px;
+    text-transform: uppercase;
+
+    @include breakpoint(0, $xxl) {
+      font-size: 48px;
+    }
+
+    @include breakpoint(0, $xl) {
+      font-size: 40px;
+    }
+
+    @include breakpoint(0, $xlg) {
+      margin-right: 0;
+      font-size: 80px;
+    }
+  }
+
+  &__label {
+    text-transform: uppercase;
+
+    @include breakpoint(0, $xlg) {
+      text-align: center;
+    }
+  }
+
+}

@@ -1,0 +1,340 @@
+.projects {
+
+  &__header {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint(0, $xxl) {
+      margin-bottom: 80px;
+    }
+
+    @include breakpoint(0, $xl) {
+      margin-bottom: 50px;
+    }
+
+    @include breakpoint(0, $xlg) {
+      margin-bottom: 30px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    font-size: 48px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    line-height: 1.2;
+
+    @include breakpoint(0, $xxl) {
+      font-size: 42px;
+    }
+
+    @include breakpoint(0, $xl) {
+      font-size: 36px;
+      letter-spacing: normal;
+    }
+
+    @include breakpoint(0, $xlg) {
+      margin-bottom: 20px;
+    }
+
+    @include breakpoint(0, $lg) {
+      font-size: 30px;
+    }
+
+    @include breakpoint(0, $md) {
+      font-size: 24px;
+    }
+
+  }
+
+  &__categories {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+
+    @include breakpoint(0, $xlg) {
+      width: 100%;
+    }
+
+    @include breakpoint(0, $xs) {
+      flex-direction: column;
+    }
+  }
+
+  &__category {
+    margin-right: 40px;
+    margin-bottom: 5px;
+
+    @include breakpoint(0, $xxl) {
+      margin-right: 30px;
+    }
+
+    @include breakpoint(0, $xl) {
+      margin-right: 15px;
+    }
+
+    @include breakpoint(0, $xs) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__category-button {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $grey-500;
+    font-weight: 300;
+
+    &:hover,
+    &:active,
+    &.active {
+      color: $dark;
+    }
+
+  }
+
+  &__list {
+    display: grid;
+    grid-gap: 100px 170px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 100px;
+
+    @include breakpoint(0, $xxl) {
+      grid-gap: 100px;
+      margin-bottom: 80px;
+    }
+
+    @include breakpoint(0, $xl) {
+      grid-gap: 50px;
+      margin-bottom: 50px;
+    }
+
+    @include breakpoint(0, $lg) {
+      margin-bottom: 30px;
+      grid-gap: 30px;
+    }
+
+    @include breakpoint(0, $sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    grid-row-end: span 5;
+
+    @include breakpoint(0, $sm) {
+      grid-row-end: unset;
+    }
+
+    &:nth-child(2),
+    &:nth-child(5n),
+    &:nth-child(6n) {
+      grid-row-end: span 4;
+
+      @include breakpoint(0, $sm) {
+        grid-row-end: unset;
+      }
+    }
+  }
+
+  &__loader {
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    height: 300px;
+  }
+
+  &__actions {
+    text-align: center;
+  }
+
+  &__load-more {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    width: 221px;
+    height: 221px;
+    font-size: 24px;
+    text-align: left;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-weight: 900;
+    border-radius: 50%;
+    background-color: $grey-300;
+    border: 1px solid $grey-400;
+
+    @include breakpoint(0, $lg) {
+      padding: 40px;
+      font-size: 20px;
+      width: 180px;
+      height: 180px;
+    }
+
+    @include breakpoint(0, $sm) {
+      padding: 30px;
+      font-size: 18px;
+      width: 150px;
+      height: 150px;
+    }
+
+    span {
+      width: min-content;
+      margin-bottom: 20px;
+
+      @include breakpoint(0, $lg) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+}
+
+.project {
+  display: block;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    z-index: 10;
+  }
+
+  &:hover {
+
+    .project__title {
+      background: -webkit-linear-gradient(-50deg, $blue 0%, $blue-500 20%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .project__image {
+
+      &:before {
+        top: -20px;
+        right: -30px;
+        opacity: 1;
+
+        @include breakpoint(0, $xlg) {
+          top: -10px;
+          right: -20px;
+        }
+
+        @include breakpoint(0, $md) {
+          top: -5px;
+          right: -10px;
+        }
+      }
+
+    }
+
+  }
+
+  &:nth-child(2),
+  &:nth-child(5n),
+  &:nth-child(6n) {
+
+    .project__image {
+      width: 66%;
+      padding-bottom: 66%;
+
+      @include breakpoint(0, $lg) {
+        width: 80%;
+        padding-bottom: 80%;
+      }
+
+      @include breakpoint(0, $sm) {
+        width: 100%;
+        padding-bottom: 100%;
+      }
+    }
+
+  }
+
+  &__image {
+    position: relative;
+    margin-bottom: 50px;
+    width: 100%;
+    padding-bottom: 100%;
+
+    @include breakpoint(0, $lg) {
+      margin-bottom: 30px;
+    }
+
+    @include breakpoint(0, $md) {
+      margin-bottom: 15px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 5;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: $primary $primary-gradient;
+      transition: all 0.3s linear;
+      border-radius: 50%;
+      opacity: 0;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      object-fit: cover;
+      z-index: 10;
+      border-radius: 50%;
+    }
+  }
+
+  &__category {
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $text;
+
+    @include breakpoint(0, $lg) {
+      font-size: 14px;
+    }
+
+    @include breakpoint(0, $sm) {
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    margin-bottom: 0;
+    line-height: 1.125;
+    color: $dark;
+    font-weight: 900;
+
+    @include breakpoint(0, $xxl) {
+      font-size: 28px;
+    }
+
+    @include breakpoint(0, $lg) {
+      font-size: 24px;
+    }
+
+    @include breakpoint(0, $md) {
+      font-size: 20px;
+    }
+  }
+
+}

@@ -1,0 +1,73 @@
+.text-context {
+
+  &__title {
+    margin-bottom: 70px;
+    background: -webkit-linear-gradient(-50deg, $blue 0%, $blue-500 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include breakpoint(0, $xxl) {
+      margin-bottom: 60px;
+    }
+
+    @include breakpoint(0, $lg) {
+      margin-bottom: 40px;
+    }
+
+    @include breakpoint(0, $md) {
+      margin-bottom: 30px;
+    }
+
+  }
+
+  &__row {
+    display: grid;
+    grid-gap: 50px 170px;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+
+    @include breakpoint(0, $xxl) {
+      grid-gap: 50px 150px;
+    }
+
+    @include breakpoint(0, $xl) {
+      grid-gap: 50px 100px;
+    }
+
+    @include breakpoint(0, $lg) {
+      grid-gap: 40px;
+    }
+
+    @include breakpoint(0, $md) {
+      grid-gap: 30px;
+    }
+  }
+
+}
+
+.text-block {
+
+  &__title {
+    border-bottom: 2px solid $dark;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    font-size: 48px;
+
+    @include breakpoint(0, $xxl) {
+      font-size: 46px;
+    }
+
+    @include breakpoint(0, $lg) {
+      letter-spacing: normal;
+      font-size: 40px;
+    }
+
+    @include breakpoint(0, $md) {
+      font-size: 32px;
+    }
+  }
+
+  &__text {
+    color: $dark
+  }
+
+}

@@ -1,0 +1,127 @@
+/* Variables */
+$heading-font-family: "Mont", -apple-system, BlinkMacSystemFont, "Segoe UI",
+Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+"Segoe UI Emoji", "Segoe UI Symbol";
+$text-font-family: "Mont", -apple-system, BlinkMacSystemFont, "Segoe UI",
+Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+"Segoe UI Emoji", "Segoe UI Symbol";
+$font-stack-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+$border-radius: 0;
+
+// Colors
+//
+// Color system
+
+$primary: #dd0589;
+$secondary: #3f1d63 ;
+$accent: $secondary;
+$white: #fff;
+$red: #f00;
+$red-500: #E3D4D4;
+$yellow: #FE8501;
+$blue: #01c1fd;
+$blue-200: #00ccff;
+$blue-500: #0b439b;
+$green: #bbd51f ;
+$green-500: #418327 ;
+$purple: #A783FF;
+$success: $green;
+$disabled: #dddde6;
+$text: #666666;
+$error: $red;
+$grey: #f8f8f8;
+$grey-200: #adadad;
+$grey-300: #f1eee9;
+$grey-400: #bebebe;
+$grey-500: #999999;
+$grey-600: #cccccc;
+$grey-background: #f6f6f6;
+$grey-border: #f6f6f6;
+$grey-text: #7d7d7d;
+$dark: #000;
+$light: #fff;
+$body-bg: $light;
+
+$color-map: (
+        primary: $primary,
+        secondary: $secondary,
+        success: $success,
+        error: $error,
+        disabled: $disabled,
+        white: $white,
+        light: $grey,
+        background: $grey-background,
+        border: $grey-border,
+        grey: $grey-text,
+        dark: $dark,
+);
+
+// Grid breakpoints
+//
+// Grid breakpoints
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 767px,
+        lg: 1024px,
+        xl: 1620px,
+);
+
+// Grid container
+//
+// Max widths of container for different breakpoints
+
+$container-max-widths: (
+  sm: 90%,
+  xl: 100%,
+);
+
+//Breakpoints
+$xs: 374px;
+$sm: 575px;
+$md: 767px;
+$lg: 991px;
+$xlg: 1365px;
+$xl: 1439px;
+$xxl: 1620px;
+
+
+$container-max-widths-wide: 1530px;
+
+// Grid container
+//
+// Max widths of container for different breakpoints
+
+$grid-gutters: 15px;
+$grid-columns: 12;
+
+// Header
+//
+// Height of header (useful
+// for fixed headers)
+
+$header-height: 60px;
+
+// Assets URL
+//
+// Relative or absolute URL where all assets are served from
+$base-url: "../../assets/";
+
+// Links
+//
+// Basic styles for links
+
+$link-color: $blue-200;
+$link-decoration: none;
+$link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: underline;
+
+// Gradient
+$primary-gradient: linear-gradient(140deg, $primary 0%, $secondary 100%);
+$secondary-gradient: linear-gradient(140deg, $blue 0%, $blue-500 100%);
+$thirty-gradient: linear-gradient(140deg, $green 0%, $green-500 100%);
+
+// Box Shadow
+$box-shadow-primary: 0px 4px 20px rgba(45, 53, 82, 0.18);

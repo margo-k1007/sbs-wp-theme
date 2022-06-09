@@ -1,0 +1,417 @@
+.contact {
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include breakpoint(0, $lg) {
+     flex-wrap: wrap;
+    }
+  }
+
+  &__content {
+    width: 22%;
+
+    @include breakpoint(0, $xl) {
+      width: 26%;
+    }
+
+    @include breakpoint(0, $lg) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+
+  &__form-wrapper {
+    width: 70%;
+
+    @include breakpoint(0, $lg) {
+      width: 100%;
+    }
+  }
+
+  &__info {
+    margin-bottom: 70px;
+
+    @include breakpoint(0, $xxl) {
+      margin-bottom: 50px;
+    }
+
+    @include breakpoint(0, $lg) {
+      margin-bottom: 30px;
+      width: 31%;
+    }
+
+    @include breakpoint(0, $md) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    color: $grey-500;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  &__text {
+    color: $dark;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+
+  }
+
+  &__form {
+    margin-top: 50px;
+
+    @include breakpoint(0, $xxl) {
+      margin-top: 40px;
+    }
+
+    @include breakpoint(0, $lg) {
+      margin-top: 30px;
+    }
+
+    @include breakpoint(0, $md) {
+      margin-top: 20px;
+    }
+  }
+
+}
+
+#contact {
+
+  #contact-form {
+    @include breakpoint(0, $sm) {
+      padding-left: 20px;
+    }
+
+    .forminator-ui {
+      counter-reset: filelds-counter;
+
+      .forminator-row {
+        position: relative;
+        counter-increment: filelds-counter;
+        margin-bottom: 50px;
+        display: flex;
+
+        @include breakpoint(0, $xxl) {
+          margin-bottom: 40px;
+        }
+
+        @include breakpoint(0, $lg) {
+          margin-bottom: 30px;
+        }
+
+        &:before {
+          display: none;
+          position: absolute;
+          top: 5px;
+          left: -20px;
+          content: counter(filelds-counter, decimal-leading-zero);
+          font-size: 14px;
+          color: $text;
+          padding-right: 10px;
+
+          @include breakpoint(0, $xl) {
+            top: 2px;
+          }
+
+          @include breakpoint(0, $lg) {
+            top: 0;
+          }
+        }
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7) {
+          &:before {
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+      }
+
+      .forminator-col {
+        width: 100%;
+      }
+
+      .forminator-response-message {
+        .forminator-success {
+          background-color: $green;
+          box-shadow: inset 2px 0 0 0 $green-500;
+        }
+      }
+
+      .forminator-label {
+        font-size: 24px;
+        letter-spacing: -1px;
+        color: $dark;
+        font-weight: 300;
+        line-height: 1.4;
+
+        @include breakpoint(0, $xxl) {
+          font-size: 20px;
+          letter-spacing: normal;
+        }
+        @include breakpoint(0, $lg) {
+          font-size: 18px;
+        }
+
+        @include breakpoint(0, $sm) {
+          font-size: 16px;
+        }
+
+        .forminator-required {
+          display: none !important;
+        }
+
+      }
+
+      .forminator-row-last {
+        margin-bottom: 0;
+        margin-top: 120px;
+
+        @include breakpoint(0, $xxl) {
+          margin-top: 80px;
+        }
+
+        @include breakpoint(0, $lg) {
+          margin-top: 60px;
+        }
+
+        @include breakpoint(0, $md) {
+          margin-top: 40px;
+        }
+      }
+
+      .forminator-input,
+      .forminator-input:hover,
+      .forminator-input:focus,
+      .forminator-input:active,
+      .forminator-textarea,
+      .forminator-textarea:hover,
+      .forminator-textarea:focus,
+      .forminator-textarea:active {
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+        padding: 10px 0;
+        height: 50px;
+        border: 0;
+        border-bottom: 1px solid $grey-500;
+        border-radius: $border-radius;
+        font-size: 40px;
+        font-family: $text-font-family;
+        box-shadow: none;
+        outline: none;
+        background-color: $white;
+        letter-spacing: -1px;
+        color: $dark;
+        font-weight: 900;
+
+        @include breakpoint(0, $xxl) {
+          font-size: 36px;
+          letter-spacing: normal;
+        }
+        @include breakpoint(0, $lg) {
+          font-size: 30px;
+        }
+
+        @include breakpoint(0, $sm) {
+          font-size: 28px;
+        }
+      }
+
+      .forminator-button-submit {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        border: 0;
+        border-radius: 0;
+        padding: 0 80px 0 0;
+        color: $dark;
+        text-align: center;
+        user-select: none;
+        background-color: transparent;
+        font-family: $text-font-family;
+        font-size: 60px;
+        font-weight: 900;
+        height: auto;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        letter-spacing: -1px;
+        line-height: 1.01;
+        background-position: 100% 50%;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='72' height='72' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000'%3E%3Cg%3E%3Cpath d='m22.4505-.12814.0081 4.49999c.002 1.06506.867 1.92695 1.9321 1.92515H60.5L21.5 45.5c-.7517.7545-1.3315 1.5798-.577 2.3316l3.1877 3.1762c.7544.7518 1.6375.2467 2.3893-.5078l39.1326-40v36.8908c.0019 1.065.8669 1.9269 1.9321 1.9251l4.4999-.0082c1.065-.0019 1.9269-.8669 1.9251-1.9321L73.9041-.22082c-.0019-1.06506-.8669-1.92695-1.9321-1.92515l-47.5964.08563c-1.0651.00191-1.927.86692-1.9251 1.9322Z'%3E%3C/path%3E%3Cpath d='M21.3096-1.70016h23v8h-23zM65.6102 49.5V26h8v23.5zM70.3096-1.70016h3v5h-3z'%3E%3C/path%3E%3C/g%3E%3Cpath d='m22 45 5.04734 4.8497L5.76436 72.00001l-5.04734-4.8497z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+
+        @include breakpoint(0, $xxl) {
+          font-size: 50px;
+        }
+
+        @include breakpoint(0, $lg) {
+          padding-right: 50px;
+          letter-spacing: normal;
+          font-size: 42px;
+        }
+
+        @include breakpoint(0, $md) {
+          font-size: 36px;
+        }
+
+        &:hover {
+          box-shadow: none;
+        }
+      }
+
+      .forminator-multi-upload {
+        display: none;
+      }
+
+      .file-upload-wrapper {
+        margin: 0 0 5px;
+        order: 2;
+        list-style: none;
+      }
+
+      .file-upload-button {
+        background-color: transparent;
+        border: none;
+        color: $dark;
+        font-size: 30px;
+        padding: 10px;
+        line-height: 1;
+        font-weight: 300;
+        cursor: pointer;
+
+        &:active,
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .forminator-uploaded-files {
+        padding: 3px 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        border-bottom: 1px solid $grey-500;
+
+        .forminator-uploaded-file {
+          margin: 0 5px 5px 0;
+        }
+
+        .forminator-uploaded-file--content {
+          position: relative;
+          background-color: $grey;
+          display: flex;
+          align-items: center;
+        }
+
+        .forminator-button-delete {
+          position: absolute;
+          margin: 0;
+          background-color: transparent;
+          right: 0;
+          top: 0;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          overflow: hidden;
+          color: $grey;
+        }
+
+        .forminator-icon-close {
+          &:before {
+            color: $grey;
+            border-radius: 50%;
+            background-color: $text;
+          }
+        }
+
+        .forminator-uploaded-file--image {
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+
+          @include breakpoint(0, $xxl) {
+            width: 60px;
+            height: 60px;
+          }
+
+          @include breakpoint(0, $lg) {
+            width: 50px;
+            height: 50px;
+          }
+        }
+
+        .forminator-uploaded-file--size {
+          display: none;
+        }
+
+        .forminator-uploaded-file--title {
+          margin-bottom: 0;
+          font-size: 36px;
+          letter-spacing: -1px;
+          color: $dark;
+          font-weight: 300;
+
+          @include breakpoint(0, $xxl) {
+            font-size: 30px;
+            letter-spacing: normal;
+          }
+
+          @include breakpoint(0, $lg) {
+            font-size: 28px;
+          }
+
+          @include breakpoint(0, $md) {
+            font-size: 24px;
+          }
+
+          @include breakpoint(0, $sm) {
+            font-size: 16px;
+          }
+
+        }
+
+        .forminator-uploaded-file--size {
+          display: none;
+        }
+
+      }
+
+      .forminator-checkbox {
+
+        .forminator-checkbox-box {
+          color: $blue;
+        }
+
+        input:checked + .forminator-checkbox-box {
+          border-color: $blue;
+        }
+
+      }
+
+    }
+
+  }
+
+}

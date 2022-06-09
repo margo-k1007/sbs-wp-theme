@@ -1,0 +1,5 @@
+/* Functions */
+
+@function theme($key, $map: $color-map) {
+  @return map-get($map, $key);
+}

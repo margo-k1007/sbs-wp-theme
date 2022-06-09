@@ -1,0 +1,46 @@
+.error-404 {
+  padding: 300px 0 150px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include breakpoint(0, $md) {
+    padding: 160px 0 80px;
+  }
+
+  &__heading {
+    font-size: 200px;
+    line-height: 1.1;
+    color: $primary;
+
+    @include breakpoint(0, $xxl) {
+      font-size: 150px;
+    }
+
+    @include breakpoint(0, $xl) {
+      font-size: 120px;
+    }
+
+    @include breakpoint(0, $lg) {
+      font-size: 85px;
+    }
+
+    @include breakpoint(0, $md) {
+      font-size: 56px;
+    }
+
+    @include breakpoint(0, $sm) {
+      font-size: 48px;
+    }
+  }
+
+  &__actions {
+    margin-top: 80px;
+
+    @include breakpoint(0, $lg) {
+      margin-top: 40px;
+    }
+  }
+
+}

@@ -1,0 +1,130 @@
+.gallery {
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    @include breakpoint(0, $xxl) {
+      margin-bottom: 20px;
+    }
+
+    @include breakpoint(0, $lg) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+    padding-right: 15px;
+
+    @include breakpoint(0, $md) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__actions {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+
+    .slick-arrow {
+
+      &:hover,
+      &:active {
+        background: $blue $secondary-gradient;
+      }
+
+    }
+  }
+
+  &__images {
+    margin-bottom: 80px;
+
+    @include breakpoint(0, $xxl) {
+      margin-bottom: 60px;
+    }
+
+    @include breakpoint(0, $lg) {
+      margin-bottom: 40px;
+    }
+
+    @include breakpoint(0, $md) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .slick-list {
+    overflow: unset;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      transform: translateX(-100%);
+      background-color: $light;
+      z-index: 10;
+    }
+  }
+
+  &__item {
+    padding: 0 15px;
+
+    @include breakpoint(0, $lg) {
+      padding: 0 10px;
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 645px;
+    padding-bottom: 645px;
+    overflow: hidden;
+
+    @include breakpoint(0, $xxl) {
+      width: 500px;
+      padding-bottom: 500px;
+    }
+
+    @include breakpoint(0, $xl) {
+      width: 450px;
+      padding-bottom: 450px;
+    }
+
+    @include breakpoint(0, $xlg) {
+      width: 350px;
+      padding-bottom: 350px;
+    }
+
+    @include breakpoint(0, $lg) {
+      width: 300px;
+      padding-bottom: 300px;
+    }
+
+    @include breakpoint(0, $md) {
+      width: 200px;
+      padding-bottom: 200px;
+    }
+
+    @include breakpoint(0, $sm) {
+      width: 150px;
+      padding-bottom: 150px;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+}

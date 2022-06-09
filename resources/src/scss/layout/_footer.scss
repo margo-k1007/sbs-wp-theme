@@ -1,0 +1,205 @@
+.footer {
+  margin-top: 130px;
+  background-color: $grey-background;
+  background-image: url("./../assets/images/footer-bubble-decor.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 25% 100%;
+
+  @include breakpoint(0, $xxl) {
+    margin-top: 100px;
+  }
+
+  @include breakpoint(0, $lg) {
+    margin-top: 80px;
+  }
+
+  @include breakpoint(0, $md) {
+    margin-top: 60px;
+    background-size: 250px auto;
+  }
+
+  @include breakpoint(0, $sm) {
+    margin-top: 40px;
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 1.5fr;
+    grid-gap: 30px;
+    padding: 150px 0;
+
+    @include breakpoint(0, $xl) {
+      grid-template-columns: 1fr 1fr;
+      padding: 100px 0;
+    }
+
+    @include breakpoint(0, $lg) {
+      padding: 80px 0;
+    }
+
+    @include breakpoint(0, $md) {
+      padding: 60px 0;
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+
+  &__col {
+
+    &:nth-child(1) {
+      @include breakpoint(0, $xl) {
+        grid-area: 1 / 1 / 1 / 3;
+      }
+      @include breakpoint(0, $md) {
+        grid-area: unset;
+      }
+    }
+
+  }
+
+  &__title {
+    margin-bottom: 80px;
+
+    @include breakpoint(0, $xl) {
+      margin-bottom: 60px;
+    }
+
+    @include breakpoint(0, $lg) {
+      margin-bottom: 40px;
+    }
+
+    @include breakpoint(0, $md) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 0;
+    background: -webkit-linear-gradient(-50deg, $green 0%, $green-500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 2.5;
+
+    @include breakpoint(0, $xxl) {
+      font-size: 20px;
+      line-height: 1.8;
+    }
+
+    @include breakpoint(0, $lg) {
+      font-size: 18px;
+      line-height: 1.4;
+    }
+
+    @include breakpoint(0, $md) {
+      font-size: 16px;
+    }
+
+    @include breakpoint(0, $sm) {
+      font-size: 14px;
+    }
+
+    a {
+      font-size: 40px;
+      color: $dark;
+
+      @include breakpoint(0, $lg) {
+        font-size: 32px;
+      }
+
+      @include breakpoint(0, $sm) {
+        font-size: 24px;
+      }
+    }
+
+  }
+
+  &__menu {
+
+    .menu-item {
+      margin-bottom: 10px;
+    }
+
+    a {
+      font-size: 14px;
+      font-weight: 900;
+      color: $dark;
+      text-transform: uppercase;
+    }
+  }
+
+  &__bottom {
+    border-top: 2px solid $dark;
+    padding: 45px 0;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(0, $lg) {
+      padding: 30px 0;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    width: 175px;
+    margin-right: 40px;
+
+    @include breakpoint(0, $lg) {
+      margin: 0 0 20px;
+    }
+
+    @include breakpoint(0, $md) {
+      width: 150px;
+    }
+  }
+
+  &__copy {
+    font-size: 16px;
+    color: $dark;
+    margin-right: 40px;
+
+    @include breakpoint(0, $lg) {
+      text-align: center;
+      margin: 0 0 20px;
+    }
+
+    @include breakpoint(0, $sm) {
+      font-size: 14px;
+    }
+  }
+
+  &__developed {
+    margin-left: auto;
+    font-size: 16px;
+    color: $dark;
+    display: flex;
+
+    @include breakpoint(0, $lg) {
+      text-align: center;
+      margin-left: 0;
+    }
+
+    @include breakpoint(0, $sm) {
+      font-size: 14px;
+    }
+
+    a {
+      color: $dark;
+      display: block;
+      width: max-content;
+      padding-left: 5px;
+
+      &:hover,
+      &:focus {
+        background: -webkit-linear-gradient(-50deg, $blue 0%, $blue-500 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}

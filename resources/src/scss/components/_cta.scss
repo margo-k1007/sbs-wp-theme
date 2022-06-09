@@ -1,0 +1,94 @@
+.cta {
+
+  &__row {
+    display: flex;
+    align-items: center;
+    width: 75%;
+    margin-left: auto;
+
+    @include breakpoint(0, $xxl) {
+      width: 80%;
+    }
+
+    @include breakpoint(0, $xlg) {
+      width: 100%;
+      flex-direction: column;
+    }
+
+  }
+
+  &__text {
+    margin: 0 10px 0 0;
+    font-size: 30px;
+    line-height: 1.5;
+
+    @include breakpoint(0, $xxl) {
+      font-size: 28px;
+    }
+
+    @include breakpoint(0, $xlg) {
+      margin: 0 0 20px;
+    }
+
+    @include breakpoint(0, $lg) {
+      font-size: 24px;
+    }
+
+    @include breakpoint(0, $md) {
+      font-size: 20px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: max-content;
+    text-transform: uppercase;
+    line-height: 1;
+    color: $dark;
+    font-weight: 900;
+    letter-spacing: -5px;
+    font-size: 96px;
+    padding: 0 100px 0 0;
+    text-decoration: none !important;
+
+    @include breakpoint(0, $xxl) {
+      font-size: 80px;
+      padding-right: 80px;
+      letter-spacing: normal;
+    }
+
+    @include breakpoint(0, $xlg) {
+      font-size: 70px;
+    }
+
+    @include breakpoint(0, $lg) {
+      font-size: 60px;
+      width: min-content;
+    }
+
+    @include breakpoint(0, $md) {
+      font-size: 50px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $dark;
+    }
+
+    svg {
+      position: absolute;
+      right: 0;
+      top: 10px;
+
+      @include breakpoint(0, $xxl) {
+        top: 5px;
+        transform: scale(0.8);
+        transform-origin: top right;
+      }
+    }
+  }
+
+}

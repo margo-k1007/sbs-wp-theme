@@ -1,0 +1,159 @@
+.main-section {
+  position: relative;
+  padding: 325px 0 200px;
+  margin-bottom: 75px;
+  background: $primary $primary-gradient;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 18%;
+    z-index: 10;
+    width: 340px;
+    height: 418px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-image: url("./../assets/images/top-bubble-decor.png");
+
+    @include breakpoint(0, $xlg) {
+      bottom: 10%;
+      width: 300px;
+    }
+
+    @include breakpoint(0, $lg) {
+      width: 200px;
+    }
+
+    @include breakpoint(0, $sm) {
+      bottom: 5%;
+      right: -100px;
+    }
+  }
+
+  @include breakpoint(0, $xxl) {
+    margin-bottom: 60px;
+    padding: 300px 0 175px;
+  }
+
+  @include breakpoint(0, $lg) {
+    margin-bottom: 30px;
+    padding: 200px 0 100px;
+  }
+
+  @include breakpoint(0, $md) {
+    margin-bottom: 25px;
+    padding: 180px 0 60px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(0, $xlg) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 5;
+    width: 55%;
+    flex: none;
+
+    @include breakpoint(0, $xlg) {
+      width: 100%;
+    }
+  }
+
+  &__image {
+    margin-top: 90px;
+    width: 66%;
+    flex: none;
+
+    position: relative;
+    right: 14%;
+    overflow: hidden;
+    padding-bottom: 66%;
+    overflow: hidden;
+    border-radius: 50%;
+
+    @include breakpoint(0, $xxl) {
+      margin-top: 0;
+      right: 15%;
+      width: 65%;
+      padding-bottom: 65%;
+    }
+
+    @include breakpoint(0, $xlg) {
+      width: 80%;
+      right: 0;
+      padding-bottom: 80%;
+      margin: 40px auto 0;
+    }
+
+    @include breakpoint(0, $sm) {
+      width: 100%;
+      padding-bottom: 100%;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  &__text {
+    border-top: 2px solid $dark;
+    padding-top: 70px;
+    width: 65%;
+    font-size: 24px;
+
+    @include breakpoint(0, $xxl) {
+      padding-top: 40px;
+      font-size: 20px;
+    }
+
+    @include breakpoint(0, $xlg) {
+      width: 100%;
+    }
+
+    @include breakpoint(0, $lg) {
+      padding-top: 30px;
+      font-size: 18px;
+    }
+
+    @include breakpoint(0, $sm) {
+      font-size: 16px;
+    }
+  }
+
+  &__actions {
+    margin-top: 70px;
+
+    @include breakpoint(0, $xxl) {
+      margin-top: 60px;
+    }
+
+    @include breakpoint(0, $xl) {
+      margin-top: 50px;
+    }
+
+    @include breakpoint(0, $lg) {
+      margin-top: 40px;
+    }
+
+    @include breakpoint(0, $md) {
+      margin-top: 30px;
+    }
+  }
+}

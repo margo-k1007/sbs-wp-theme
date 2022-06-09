@@ -1,0 +1,158 @@
+.service-filter {
+
+  &__title {
+    margin-bottom: 60px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: $text;
+    font-weight: 300;
+    text-transform: uppercase;
+
+    @include breakpoint(0, $xxl) {
+      margin-bottom: 40px;
+    }
+
+    @include breakpoint(0, $lg) {
+      margin-bottom: 30px;
+    }
+
+    @include breakpoint(0, $md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include breakpoint(0, $md) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 10px;
+
+    &:last-child {
+
+      & > span {
+        display: none;
+      }
+
+    }
+
+    & > span {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 90px;
+      letter-spacing: -4px;
+      color: $text;
+      font-weight: 300;
+      line-height: 1;
+
+      @include breakpoint(0, $xxl) {
+        font-size: 70px;
+      }
+
+      @include breakpoint(0, $xlg) {
+        font-size: 60px;
+      }
+
+      @include breakpoint(0, $md) {
+        display: none;
+      }
+    }
+
+  }
+
+  &__button {
+    font-size: 90px;
+    letter-spacing: -3px;
+    color: $text;
+    font-weight: 900;
+    line-height: 1.1;
+    text-align: left;
+    display: inline-flex;
+    align-items: flex-start;
+
+    @include breakpoint(0, $xxl) {
+      font-size: 70px;
+      letter-spacing: -2px;
+    }
+
+    @include breakpoint(0, $xlg) {
+      letter-spacing: normal;
+      font-size: 56px;
+    }
+
+    @include breakpoint(0, $md) {
+      font-size: 40px;
+    }
+
+    @include breakpoint(0, $sm) {
+      font-size: 30px;
+    }
+
+    span {
+      display: block;
+      width: auto;
+    }
+
+    &:hover {
+      span {
+        display: block;
+        background: -webkit-linear-gradient(-50deg, $green 0%, $green-500 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      sup {
+        background: -webkit-linear-gradient(-50deg, $green 0%, $green-500 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    &:active,
+    &.active {
+
+      span {
+        background: -webkit-linear-gradient(-50deg, $blue 0%, $blue-500 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      sup {
+        background: -webkit-linear-gradient(-50deg, $blue 0%, $blue-500 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    sup {
+      top: 0;
+      letter-spacing: 2px;
+      line-height: 1;
+      font-size: 30px;
+
+      @include breakpoint(0, $xxl) {
+        font-size: 28px;
+      }
+
+      @include breakpoint(0, $xlg) {
+        font-size: 24px;
+      }
+
+      @include breakpoint(0, $md) {
+        font-size: 20px;
+      }
+
+      @include breakpoint(0, $md) {
+        font-size: 16px;
+      }
+    }
+
+  }
+
+}

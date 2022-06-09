@@ -1,0 +1,59 @@
+/* Global style declarations */
+html {
+  box-sizing: border-box;
+}
+
+// https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*::before,
+*::after,
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $text;
+  background-color: $body-bg;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#page {
+  overflow-x: hidden;
+}
+
+.site-content {
+  //padding-bottom: 40px;
+}
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+  outline: 0;
+  transition: color 0.1s;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+hr {
+  margin: 1rem 0;
+  border: 0;
+  border-top: 1px solid theme(border);
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+::selection {
+  background-color: theme(primary);
+  color: theme(white);
+}

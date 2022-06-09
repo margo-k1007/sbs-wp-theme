@@ -1,0 +1,196 @@
+/* Helpers */
+
+// General
+//
+//
+
+.skew--top {
+  clip-path: polygon(0 0, 100% 7%, 100% 100%, 0 100%);
+}
+
+.skew--clip {
+  clip-path: polygon(0 0, 100% 0, 100% 93%, 0 100%);
+}
+
+// Image helpers
+//
+//
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+
+.img-rounded {
+  border-radius: $border-radius;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+// Text helpers
+//
+//
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.dark-context {
+  color: $white !important;
+}
+
+.list-unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.small {
+  font-size: 80%;
+}
+
+.screen-reader-text,
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.d-none-md {
+  @include breakpoint(0, $lg) {
+    display: none !important;
+  }
+}
+
+.d-block-sm {
+  @include breakpoint(0, $md) {
+    display: block !important;
+  }
+}
+
+.bg-contain {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+
+.bg-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.bg-repeat {
+  background-repeat: repeat;
+  background-size: auto;
+  -webkit-background-size: auto;
+  background-position: 0 0;
+}
+
+.card {
+  padding: 60px;
+  background-color: $light;
+
+  @include breakpoint(0, $xxl) {
+    padding: 40px;
+  }
+
+  @include breakpoint(0, $lg) {
+   padding: 28px;
+  }
+
+  @include breakpoint(0, $md) {
+   padding: 16px;
+  }
+
+  @include breakpoint(0, $sm) {
+    margin-bottom: 12px;
+  }
+
+}
+
+.divider {
+  width: 100%;
+  border-top: 2px solid $dark;
+
+  &--grey {
+    border-top: 1px solid $grey-border;
+  }
+
+  &--top {
+    margin-bottom: 50px;
+
+    //@include breakpoint(0, $xxl) {
+    //  margin-bottom: 70px;
+    //}
+    //
+    //@include breakpoint(0, $xl) {
+    //  margin-bottom: 50px;
+    //}
+
+    @include breakpoint(0, $lg) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &--bottom {
+    margin-top: 90px;
+
+    @include breakpoint(0, $xxl) {
+      margin-top: 70px;
+    }
+
+    @include breakpoint(0, $xl) {
+      margin-top: 50px;
+    }
+
+    @include breakpoint(0, $lg) {
+      margin-top: 30px;
+    }
+  }
+}
+
+.mb-3 {
+  margin-bottom: 30px !important;
+
+  @include breakpoint(0, $xxl) {
+    margin-bottom: 20px !important;
+  }
+}
+
+.mb-4 {
+  margin-bottom: 40px !important;
+
+  @include breakpoint(0, $xxl) {
+    margin-bottom: 30px !important;
+  }
+
+  @include breakpoint(0, $lg) {
+    margin-bottom: 20px !important;
+  }
+}

@@ -1,0 +1,167 @@
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  border: 0;
+  border-radius: $border-radius;
+  padding: 20px 30px;
+  color: $dark;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: $primary;
+  font-family: $text-font-family;
+  font-size: 20px;
+  line-height: 1.1;
+  font-weight: 900;
+  text-transform: none;
+  transition: opacity .15s ease-in-out, color .15s ease-in-out, background-color .15s ease-in-out, background-size .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  cursor: pointer;
+
+  @include breakpoint(0, $xlg) {
+    padding: 15px 20px;
+    font-size: 18px;
+  }
+
+  @include breakpoint(0, $lg) {
+    font-size: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    outline: none;
+    color: $dark;
+    opacity: 0.9;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+  }
+
+  &--primary {
+    background-color: $primary;
+  }
+
+  &--secondary {
+    color: $light;
+    background-color: $secondary;
+
+    &:hover,
+    &:focus {
+      color: $light;
+    }
+  }
+
+  &--gradient {
+    color: $light;
+    background: $secondary $primary-gradient;
+    background-size: 100% 100%;
+
+    &:hover,
+    &:focus {
+      color: $light;
+      opacity: 1;
+      animation: gradient 5s ease infinite;
+      background-size: 150% 150%;
+    }
+  }
+
+  &--link {
+    text-transform: none;
+    padding: 0;
+    color: $dark;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+      color: $dark;
+    }
+
+    &.dark-context {
+      color: $light;
+    }
+  }
+
+  &--icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      transform: scale(1.4);
+      transform-origin: center center;
+
+      @include breakpoint(0, $xxl) {
+        transform: none;
+      }
+
+      path {
+        transition: fill 0.2s;
+      }
+
+    }
+
+    &:hover,
+    &:focus {
+
+      svg {
+
+        path {
+          fill: currentColor;
+        }
+
+      }
+
+    }
+
+  }
+
+  &--icon-left {
+
+    span {
+      margin-left: 25px;
+
+      @include breakpoint(0, $xxl) {
+        margin-left: 10px;
+      }
+    }
+
+  }
+
+  &--icon-right {
+
+    span {
+      margin-right: 25px;
+
+      @include breakpoint(0, $xxl) {
+        margin-right: 10px;
+      }
+    }
+
+  }
+
+}
+
+@keyframes gradient {
+  50% {
+    background-position: 100% 0;
+  }
+}
+
+.scroll-up-button {
+  position: fixed;
+  display: none;
+  bottom: 20px;
+  right: 2px;
+  padding: 14px 10px;
+  opacity: 0.4;
+  z-index: 999;
+
+  &:hover {
+    opacity: 1;
+  }
+}

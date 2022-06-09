@@ -1,0 +1,72 @@
+.newsletter {
+
+  &__row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: -100px;
+      left: 0;
+      width: 100%;
+      border-top: 1px solid $grey-border;
+
+      @include breakpoint(0, $xxl) {
+        top: -80px;
+      }
+
+      @include breakpoint(0, $xl) {
+        top: -60px;
+      }
+
+      @include breakpoint(0, $lg) {
+        top: -40px;
+      }
+
+      @include breakpoint(0, $md) {
+        top: -30px;
+      }
+    }
+
+    @include breakpoint(0, $lg) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__content {
+    margin-right: 20px;
+
+    @include breakpoint(0, $lg) {
+      margin: 0 0 40px;
+    }
+  }
+
+  &__form {
+    width: 50%;
+    flex: none;
+
+    @include breakpoint(0, $lg) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    @include breakpoint(0, $lg) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+
+    @include breakpoint(0, $sm) {
+      font-size: 14px;
+    }
+  }
+
+}

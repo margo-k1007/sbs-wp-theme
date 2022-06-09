@@ -1,0 +1,57 @@
+.heading-section {
+  position: relative;
+  padding: 250px 0 170px;
+
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background: $primary $primary-gradient;
+    opacity: 0.7;
+  }
+
+  @include breakpoint(0, $xxl) {
+    padding: 200px 0 150px;
+  }
+
+  @include breakpoint(0, $lg) {
+    margin-bottom: 30px;
+    padding: 200px 0 100px;
+  }
+
+  @include breakpoint(0, $md) {
+    margin-bottom: 25px;
+    padding: 180px 0 60px;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 5;
+  }
+
+  &__content {
+    padding-left: 50px;
+
+    @include breakpoint(0, $xlg) {
+      padding-left: 0;
+    }
+  }
+
+  &__title {
+
+    br {
+      @include breakpoint(0, $md) {
+        display: inline;
+      }
+    }
+    
+  }
+}
